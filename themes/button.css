@@ -1,0 +1,41 @@
+@component-namespace bi {
+    @b button{
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 4px;
+        box-sizing: border-box;
+        
+        @m default{
+            color: #000;
+            background: $color-default;
+            border: 1px solid #bfcbd9;
+        }
+        @m primary{
+            color: #fff;
+            background: $color-primary;
+            border: 1px solid $color-primary;
+        }
+        @m success{
+            color: #fff;
+            background: $color-success;
+            border: 1px solid $color-success;
+        }
+        @m info{
+            color: #fff;
+            background: $color-info;
+            border: 1px solid $color-info;
+        }
+        @m warning{
+            color: #fff;
+            background: $color-warning;
+            border: 1px solid $color-warning;
+        }
+        @m danger{
+            color: #fff;
+            background: $color-danger;
+            border: 1px solid $color-danger;
+        }
+    }
+}
