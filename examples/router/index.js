@@ -27,7 +27,7 @@ const routes = [
     {path: '/', component: HomePage},
     {
         path: '/components',
-        redirect: '/components/layout',
+        redirect: '/components/intro',
         component: ComponentPage,
         children
     }

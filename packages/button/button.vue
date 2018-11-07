@@ -1,5 +1,7 @@
 <template>
-    <div class="bi-button" :class="['bi-button--' + type]"><slot></slot></div>
+    <button :disabled="disabled" class="bi-button" :class="['bi-button--' + type, {
+        'is-plain': plain, 'is-round': round
+    }]" @click="onClick"><slot></slot></button>
 </template>
 
 <script>
@@ -12,6 +14,20 @@ export default {
         type: {
             type: String,
             default: 'default'
+        },
+        disabled: {
+            type: Boolean
+        },
+        round: {
+            type: Boolean
+        },
+        plain: {
+            type: Boolean
+        }
+    },
+    methods: {
+        onClick(e){
+            this.$emit('click', e)
         }
     }
 }

@@ -73,6 +73,11 @@ export default {
     border: 1px solid #e2ecf4;
     padding: 20px;
     margin-top: 10px;
+    &>div{
+        &+div{
+            margin-top: 10px;
+        }
+    }
 }
 .highlight-wrapper pre{
     padding: 14px;

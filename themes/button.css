@@ -1,41 +1,164 @@
 @component-namespace bi {
-    @b button{
+    @b button {
         display: inline-block;
         padding: 10px 20px;
         font-size: 14px;
         cursor: pointer;
         border-radius: 4px;
         box-sizing: border-box;
-        
-        @m default{
+        outline: none;
+
+        @when round {
+            border-radius: 18px;
+        }
+
+        &:hover{
+            opacity: .7;
+        }
+        &:disabled{
+            cursor: not-allowed;
+        }
+
+        @m default {
             color: #000;
             background: $color-default;
             border: 1px solid #bfcbd9;
+
+            @when plain {
+                border: 1px solid #3faaf5;
+                background: #fff;
+                color: #1f2d3d;
+                &:hover{
+                    color: #3faaf5;
+                }
+                &:disabled{
+                    color: #1f2d3d;
+                }
+            }
+            &:hover{
+                border: 1px solid #3faaf5;
+                color: #3faaf5;
+            }
+            &:disabled{
+                border: 1px solid #bfcbd9;
+                opacity: .3;
+                color: #1f2d3d;
+            }
         }
-        @m primary{
+        @m primary {
             color: #fff;
             background: $color-primary;
             border: 1px solid $color-primary;
+            @when plain {
+                border-color: $color-primary;
+                color: $color-primary;
+                background: rgba(63,170,245,.05);
+                &:hover {
+                    opacity: 1;
+                    color: #fff;
+                    background: $color-primary;
+                }
+                &:disabled {
+                    opacity: .3;
+                    color: $color-primary;
+                    background: rgba(63,170,245,.05);
+                }
+            }
+            &:disabled {
+                opacity: .3;
+            }
         }
-        @m success{
+        @m success {
             color: #fff;
             background: $color-success;
             border: 1px solid $color-success;
+            @when plain {
+                background: rgba(19,206,102,.05);
+                border-color: $color-success;
+                color: $color-success;
+                &:hover {
+                    opacity: 1;
+                    color: #fff;
+                    background: $color-success;
+                }
+                &:disabled {
+                    opacity: .3;
+                    color: $color-success;
+                    background: rgba(19,206,102,.05);
+                }
+            }
+            &:disabled {
+                opacity: .3;
+            }
         }
-        @m info{
+        @m info {
             color: #fff;
             background: $color-info;
             border: 1px solid $color-info;
+            @when plain {
+                background: rgba(80,191,255,.05);
+                border-color: $color-info;
+                color: $color-info;
+                &:hover {
+                    opacity: 1;
+                    color: #fff;
+                    background: $color-info;
+                }
+                &:hover {
+                    opacity: .3;
+                    background: rgba(80,191,255,.05);
+                    color: $color-info;
+                }
+            }
+            &:disabled{
+                opacity: .3;
+            }
         }
-        @m warning{
+        @m warning {
             color: #fff;
             background: $color-warning;
             border: 1px solid $color-warning;
+            @when plain {
+                background: rgba(247,186,42,.05);
+                border-color: $color-warning;
+                color: $color-warning;
+                &:hover {
+                    opacity: 1;
+                    color: #fff;
+                    background: $color-warning;
+                }
+                &:disabled {
+                    opacity: .3;
+                    background: rgba(247,186,42,.05);
+                    color: $color-warning;
+                }
+            }
+            &:disabled{
+                opacity: .3;
+            }
         }
-        @m danger{
+        @m danger {
             color: #fff;
             background: $color-danger;
             border: 1px solid $color-danger;
+            @when plain {
+                background: rgba(255,73,73,.05);
+                border-color: $color-danger;
+                color: $color-danger;
+                &:hover {
+                    opacity: 1;
+                    color: #fff;
+                    background: $color-danger;
+                }
+                &:disabled {
+                    opacity: .3;
+                    background: rgba(255,73,73,.05);
+                    color: $color-danger;
+                }
+            }
+            &:disabled {
+                opacity: .3;
+            }
         }
     }
 }
